@@ -26,17 +26,20 @@ const Hero = () => {
         <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
       </HeroBg>
       <HeroContent>
-        <HeroH1>People | Memories | Value</HeroH1>
-        <HeroP>Connecting People. Sustaining Value. Creating Memories</HeroP>
+        <HeroH1>Olympians</HeroH1>
+        <HeroP>
+          Community of inevitables: goal-oriented and vision driven individuals
+        </HeroP>
         <HeroBtn>
           <Button
-            to="signup"
+            href="http://wa.me/+2348084809607"
+            target="_blank"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
-            primary="true"
+            // primary="true"
             white="true"
           >
-            Get Started {hover ? <ArrowForward /> : <ArrowRight />}
+            Join us {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
         </HeroBtn>
       </HeroContent>

@@ -3,11 +3,6 @@ import { animateScroll as scroll } from "react-scroll";
 import {
   FooterContainer,
   FooterWrap,
-  FooterLinksContainer,
-  FooterLinksWrapper,
-  FooterLinkItems,
-  FooterLinkTitle,
-  FooterLink,
   FooterSocialMedia,
   FooterSocialWrap,
   FooterSocialLogo,
@@ -15,14 +10,14 @@ import {
   FooterSocialIcons,
   SocialIconLink,
 } from "./FooterStyled";
-import Logo from "../../images/Logo.svg";
 import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
+  FaTiktok,
+  FaWhatsapp,
   FaTwitter,
   FaYoutube,
+  FaMailBulk,
 } from "react-icons/fa";
+import { GiFlamingTrident } from "react-icons/gi";
 
 const Footer = () => {
   const toggleHome = () => {
@@ -30,9 +25,65 @@ const Footer = () => {
   };
   return (
     <>
-      <FooterContainer>
+      <FooterContainer
+        to="contact"
+        id="contact"
+        smooth={true}
+        duration={500}
+        spy={true}
+        exact="true"
+      >
         <FooterWrap>
-          <FooterLinksContainer>
+          <div style={{ color: "white", marginBottom: "1rem" }}>
+            {" "}
+            Contact Us{" "}
+          </div>
+          <div style={{ color: "white", marginBottom: "2rem" }}>
+            {" "}
+            Reach us via the followwing channels partnerships, sponsorships and
+            general inquiries:{" "}
+          </div>
+          <FooterSocialIcons>
+            <SocialIconLink
+              href="https://www.tiktok.com/@olympianstv"
+              target="_blank"
+              aria-label="TikTok"
+            >
+              <FaTiktok />
+            </SocialIconLink>
+
+            <SocialIconLink
+              href="http://wa.me/+2348084809607"
+              target="_blank"
+              aria-label="Whatsapp"
+            >
+              <FaWhatsapp />
+            </SocialIconLink>
+
+            <SocialIconLink
+              href="//youtube.com/@olympiangamers"
+              target="_blank"
+              aria-label="YouTube"
+            >
+              <FaYoutube />
+            </SocialIconLink>
+            <SocialIconLink
+              href="mailto:olympiansfpl@gmail.com"
+              target="_blank"
+              aria-label="YouTube"
+            >
+              <FaMailBulk />
+            </SocialIconLink>
+
+            <SocialIconLink
+              href="https://twitter.com/OlympiansFPL"
+              target="_blank"
+              aria-label="Twitter"
+            >
+              <FaTwitter />
+            </SocialIconLink>
+          </FooterSocialIcons>
+          {/* <FooterLinksContainer>
             <FooterLinksWrapper>
               <FooterLinkItems>
                 <FooterLinkTitle> Who Are We? </FooterLinkTitle>
@@ -72,60 +123,18 @@ const Footer = () => {
                 <FooterLink to="/">Ipsum</FooterLink>
               </FooterLinkItems>
             </FooterLinksWrapper>
-          </FooterLinksContainer>
-
+          </FooterLinksContainer> */}
           <FooterSocialMedia>
             <FooterSocialWrap>
               <FooterSocialLogo to="/" onClick={toggleHome}>
                 <>
-                  <img src={Logo} />
-                  <sub>©</sub>
+                  Scroll to Top
+                  <GiFlamingTrident style={{ color: "#ff2957" }} size={60} />
                 </>
               </FooterSocialLogo>
               <FooterWebsiteRights>
                 All rights reserved. {new Date().getFullYear()}
               </FooterWebsiteRights>
-              <FooterSocialIcons>
-                <SocialIconLink
-                  href="//www.linkedin.com/company/king-cabana-hq/"
-                  target="_blank"
-                  aria-label="LinkedIn"
-                >
-                  <FaLinkedin />
-                </SocialIconLink>
-
-                <SocialIconLink
-                  href="//www.instagram.com/kingcabanahq/"
-                  target="_blank"
-                  aria-label="Instagram"
-                >
-                  <FaInstagram />
-                </SocialIconLink>
-
-                <SocialIconLink
-                  href="//www.youtube.com"
-                  target="_blank"
-                  aria-label="YouTube"
-                >
-                  <FaYoutube />
-                </SocialIconLink>
-
-                <SocialIconLink
-                  href="//www.twitter.com/KingCabanaHQ"
-                  target="_blank"
-                  aria-label="Twitter"
-                >
-                  <FaTwitter />
-                </SocialIconLink>
-
-                <SocialIconLink
-                  href="//www.facebook.com"
-                  target="_blank"
-                  aria-label="Facebook"
-                >
-                  <FaFacebook />
-                </SocialIconLink>
-              </FooterSocialIcons>
             </FooterSocialWrap>
           </FooterSocialMedia>
         </FooterWrap>

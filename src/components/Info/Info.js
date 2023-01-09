@@ -1,6 +1,4 @@
 import React from "react";
-import { Button } from "../ButtonStyled";
-// import { svgg, svggg, svgggg } from "../../images/svgg.svg";
 import {
   InfoContainer,
   InfoWrapper,
@@ -11,10 +9,11 @@ import {
   TopLine,
   Heading,
   Subtitle,
-  BtnWrap,
+  // BtnWrap,
   ImgWrap,
   Img,
 } from "./InfoStyled";
+// import { Button } from "../ButtonStyled";
 
 const Info = ({
   lightBg,
@@ -42,7 +41,7 @@ const Info = ({
                 <TopLine>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
-                <BtnWrap>
+                {/* <BtnWrap>
                   <Button
                     to="home"
                     smooth={true}
@@ -56,7 +55,7 @@ const Info = ({
                   >
                     {buttonLabel}
                   </Button>
-                </BtnWrap>
+                </BtnWrap> */}
               </TextWrapper>
             </Column1>
             <Column2>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Logo from "../../images/Logo.svg";
 import { animateScroll as scroll } from "react-scroll";
 import {
   Nav,
@@ -9,10 +8,9 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
-  NavBtn,
-  NavBtnLink,
 } from "./NavbarStyled";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { GiFlamingTrident } from "react-icons/gi";
 
 const Navbar = () => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -58,7 +56,8 @@ const Navbar = () => {
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLogo to="/" onClick={toggleHome}>
-            <img src={Logo} />
+            {/* <img src={Logo} alt="" /> */}
+            <GiFlamingTrident style={{ color: "#ff2957" }} size={60} />
           </NavLogo>
 
           <MobileIcon
@@ -171,37 +170,42 @@ const Navbar = () => {
               <NavLinks
                 onClick={handleClick}
                 click={click}
-                to="services"
+                to="channels"
                 smooth={true}
                 duration={500}
                 spy={true}
                 exact="true"
               >
-                Services
+                Channels
               </NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks
                 onClick={handleClick}
                 click={click}
-                to="signup"
+                to="membership"
                 smooth={true}
                 duration={500}
                 spy={true}
                 exact="true"
               >
-                Sign Up
+                Membership
               </NavLinks>
             </NavItem>
-
-            <NavBtn>
-              <NavBtnLink to="/login">Log In</NavBtnLink>
-            </NavBtn>
+            <NavItem>
+              <NavLinks
+                onClick={handleClick}
+                click={click}
+                to="contact"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+              >
+                Contact Us
+              </NavLinks>
+            </NavItem>
           </NavMenu>
-          {/* 
-          <NavBtn>
-            <NavBtnLink to="/login">Log In</NavBtnLink>
-          </NavBtn> */}
         </NavbarContainer>
       </Nav>
     </>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
 
-export const ServicesContainer = styled(Link)`
+export const ServicesContainer = styled.div`
   height: 800px;
   display: flex;
   flex-direction: column;

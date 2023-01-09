@@ -10,8 +10,8 @@ import {
   homeObjThree,
   homeObjFive,
 } from "../components/Info/Data";
-import Services from "../components/Services/Services";
 import Footer from "../components/Footer/Footer";
+import Channels from "../components/Services/Channels";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +28,7 @@ const Home = () => {
       <Info {...homeObjOne} />
       <Info {...homeObjTwo} />
       <Info {...homeObjThree} />
-      <Services />
+      <Channels />
       <Info {...homeObjFive} />
       <Footer />
     </>
