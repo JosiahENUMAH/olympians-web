@@ -23,7 +23,16 @@ const Hero = () => {
   return (
     <HeroContainer>
       <HeroBg>
-        <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
+        <VideoBg
+          id="video"
+          autoPlay
+          loop
+          muted
+          src={Video}
+          playsInline
+          preload="metadata"
+          type="video/mp4"
+        />
       </HeroBg>
       <HeroContent>
         <HeroH1>Olympians</HeroH1>
