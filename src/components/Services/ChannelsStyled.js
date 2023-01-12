@@ -2,20 +2,21 @@ import styled from "styled-components";
 // import { Link } from "react-scroll";
 
 export const ServicesContainer = styled.div`
-  height: 800px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #c0bebe;
 
-  @media screen and (max-width: 768px) {
-    height: 1100px;
+  @media screen and (max-width: 1000px) {
+    height: 100%;
+    padding: 3rem 0;
   }
 
-  @media screen and (max-width: 480px) {
+  /* @media screen and (max-width: 480px) {
     height: 1300px;
-  }
+  } */
 `;
 
 export const ServicesWrapper = styled.div`

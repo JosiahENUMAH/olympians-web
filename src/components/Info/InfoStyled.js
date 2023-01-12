@@ -5,20 +5,24 @@ export const InfoContainer = styled.div`
   background: ${({ lightBg }) => (lightBg ? "#c0bebe" : "white")};
 
   @media screen and (max-width: 768px) {
-    padding: 100px 0;
+    padding: 0;
   }
 `;
 
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 860px;
+  height: 600px;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 24px;
+  padding: 24px;
   justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    height: 100%;
+  }
 `;
 
 export const InfoRow = styled.div`
@@ -38,18 +42,30 @@ export const Column1 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col1;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 5px;
+  }
 `;
 
 export const Column2 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col2;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 5px;
+  }
 `;
 
 export const TextWrapper = styled.div`
   max-width: 540px;
   padding-top: 0;
   padding-bottom: 60px;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 5px;
+  }
 `;
 
 export const TopLine = styled.p`
